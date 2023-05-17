@@ -8,6 +8,8 @@ const fetchPosts = createAsyncThunk(
         signal: thunkApi.signal,
       });
       const data = await response.json();
+      console.log(data);
+
       return data;
     } catch (err) {
       return thunkApi.rejectWithValue(err.message);

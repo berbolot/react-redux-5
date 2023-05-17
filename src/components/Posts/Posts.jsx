@@ -11,6 +11,10 @@ const Posts = () => {
 
   useEffect(() => {
     dispatch(fetchPosts());
+    const interval = setInterval(() => {
+      console.log("first");
+    }, 3000)
+    return () => clearInterval(interval)
   }, []);
 
 
